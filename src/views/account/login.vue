@@ -196,7 +196,7 @@ export default {
     }
   },
   methods: {
-    // 获取账号数据
+    // 获取账号数据并分页
     getList() {
       var start = (this.listQuery.page - 1) * this.listQuery.limit
       var end = this.listQuery.page * this.listQuery.limit
