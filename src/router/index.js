@@ -56,6 +56,34 @@ export const constantRoutes = [
   },
 
   {
+    path: '/账号管理',
+    component: Layout,
+    // redirect: '/账号管理/账号管理',
+    name: '账号管理',
+    meta: { title: '账号管理', icon: 'user' },
+    children: [
+      {
+        path: '账号登录',
+        name: '账号登录',
+        component: () => import('@/views/account/login'),
+        meta: { title: '账号登录', icon: 'user' }
+      },
+      {
+        path: '加群',
+        name: '加群',
+        component: () => import('@/views/account/group'),
+        meta: { title: '加群', icon: 'table' }
+      },
+      {
+        path: '测试',
+        name: '测试',
+        component: () => import('@/views/account/test'),
+        meta: { title: '测试', icon: 'table' }
+      }
+    ]
+  },
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
